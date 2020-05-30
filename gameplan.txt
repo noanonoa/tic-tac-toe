@@ -1,0 +1,80 @@
+# TIC-TAC-TOE
+
+//********************
+**   REQUIREMENTS   **
+********************//
+- [x] A user should be able to click on different squares to make a move. (JS Function)
+- [x] Every click will alternate between marking an `X` and `O`. (JS Function)
+- [x] Upon marking of an individual cell, use JavaScript to add a class to each cell to display 	the separate players.
+- [x] Display a message to indicate which turn is about to be played. (HTML <div> and JS 		Function)
+- [x] Detect draw conditions (ties & cat's game) (JS Function)
+- [x] Detect winner: Stop game and declare the winner if one player ends up getting three in a row.
+      Hint: Determine a set of winning combinations.  Check those combinations on the board contents after everyone move.
+
+//********************
+**       BONUS      **
+********************//
+- [ ] Implement your reset button without refreshing the whole page
+- [ ] Track player's wins over time
+- [ ] Add a simple AI to support one player vs computer mode.  In this case, "simple" just means having the computer pick a random empty square.
+- [ ] Make your computer seem more human by adding a short time delay between your turn and the computer's turn.
+- [ ] Style it up! Get creative, or even make a theme!
+- [ ] SUPER BONUS: Add an AI that can beat you every time with the mini-max algorithm.
+
+
+
+//*********************
+**     GAME PLAN     **
+*********************//
+
+
+## HTML
+
+- [ ] 3x3 Grid Container (Parent div)
+- [ ] 9 Grids represented by 9 divs (Child divs)
+- [ ] A div for players' turn message (top or bottom of `gameBox`)
+
+
+
+## CSS
+
+- [ ] Mark up for `X` and `O` (images? text?)
+- [ ] Center `gameBox` and message <div>
+
+
+
+## JS
+
+### Variables
+#### DOM Manipulation (UI)
+- [ ] var.getElementById's for each div (variables that can later be accessed with functions)
+- [ ] Function for `user` to be able to click on squares (needs .addEventListener 'click')
+
+#### Game Logic
+- [ ] A reset function (BONUS: do it without refreshing the page)
+- [ ] Function for each click to alternate between `X` and `O`
+	- [ ] This needs to be done by `.classList.add` and `.classList.remove`
+		Look into using % to produce a value of `0` or `1` to loop through for alternating
+- [ ] Function for draw conditions
+	- [ ] This needs some type of loop to check whether game state has no more possibilities
+		In which case, the game fades and can be restarted (cat's game!)
+- [ ] Function for win conditions
+	- [ ] This needs some type of loop to check whether win condition has been met at any time
+	- [ ] The win condition is checked with each 'click' at every move
+		This is accomplished by setting winning combinations and then checking for them
+	- [ ] Win conditions declare the winner at message <div>
+
+
+
+
+
+
+
+//******************
+** Thinking Space **
+******************//
+
+
+
+
+
