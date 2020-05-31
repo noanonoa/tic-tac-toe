@@ -1,3 +1,45 @@
+body {
+  text-align: center;
+}
+
 h1 {
-  color: purple;
+  color: #800080;
+  text-align: center;
+  margin-top: 30px;
+  background-color: green;
+}
+main {
+  /* text-align: center; */
+  background-color: grey;
+}
+
+
+/*classes********************/
+.msgbox {
+  margin-top: 3em;
+  margin-bot: 2em;
+  background-color: pink;
+}
+
+.board {
+  margin: 2em;
+  background-color: yellow;
+}
+
+.top-row {
+  
+}
+
+.mid-row {
+  
+}
+
+.bot-row {
+  
+}
+
+.grid {
+  display: inline-block;
+  font-size: 3.125em;
+  margin: 10px;
 }
