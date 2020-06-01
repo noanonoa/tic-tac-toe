@@ -30,16 +30,16 @@
 
 ## HTML
 
-- [ ] 3x3 Grid Container (Parent div)
-- [ ] 9 Grids represented by 9 divs (Child divs)
-- [ ] A div for players' turn message (top or bottom of `gameBox`)
+- [x] 3x3 Grid Container (board div)
+- [x] 9 Grids represented by 9 divs (Child divs)
+- [x] A div for players' turn message (top or bottom of `gameBox`)
 
 
 
 ## CSS
 
-- [ ] Mark up for `X` and `O` (images? text?)
-- [ ] Center `gameBox` and message <div>
+- [x] Mark up for `X` and `O` (images? text?)
+- [x] Center `gameBox` and message <div>
 
 
 
@@ -47,22 +47,16 @@
 
 ### Variables
 #### DOM Manipulation (UI)
-- [ ] var.getElementById's for each div (variables that can later be accessed with functions)
-- [ ] Function for `user` to be able to click on squares (needs .addEventListener 'click')
+- [x] var.getElementById's for each div (variables that can later be accessed with functions)
+- [x] Function for `user` to be able to click on squares (needs .addEventListener 'click')
+- [x] If a div contains an answer, then cannot click that space anymore
 
 #### Game Logic
 - [ ] A reset function (BONUS: do it without refreshing the page)
-- [ ] Function for each click to alternate between `X` and `O`
-	- [ ] This needs to be done by `.classList.add` and `.classList.remove`
-		Look into using % to produce a value of `0` or `1` to loop through for alternating
-- [ ] Function for draw conditions
-	- [ ] This needs some type of loop to check whether game state has no more possibilities
-		In which case, the game fades and can be restarted (cat's game!)
-- [ ] Function for win conditions
-	- [ ] This needs some type of loop to check whether win condition has been met at any time
-	- [ ] The win condition is checked with each 'click' at every move
-		This is accomplished by setting winning combinations and then checking for them
-	- [ ] Win conditions declare the winner at message <div>
+- [x] Function for each click to alternate between `X` and `O`
+
+		Look into using % (modulus) to produce a value of `0` or `1` to loop through for 		alternating values
+- [x] Loop players' array through win conditions
 
 
 
@@ -73,8 +67,19 @@
 //******************
 ** Thinking Space **
 ******************//
+- [ ] change combinations' background to highlight winning moves
+	- [ ] This needs to be done by `.classList.add` and `.classList.remove`
+
+- [x] .push() e.target.id into the array of player X or player O
+
+- [ ] create a `endGame` function
+	- [ ] removes all event listeners so no one can play anymore
+	call `endGame` right after counter === 3 in checkWin()
 
 
-
+	
+- [ ] print winner/draw on message box
+	if (win condition) { gamePrompt.textContent = "winner"; }
+	else { gamePrompt.textContent = "draw"; }
 
 

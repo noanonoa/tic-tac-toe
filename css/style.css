@@ -1,16 +1,17 @@
 body {
   text-align: center;
+  font-family: helvetica;
 }
 
 h1 {
   color: #800080;
   text-align: center;
   margin-top: 30px;
-  background-color: green;
+  /* background-color: green; */
 }
 main {
   /* text-align: center; */
-  background-color: grey;
+  /* background-color: grey; */
 }
 
 
@@ -18,28 +19,49 @@ main {
 .msgbox {
   margin-top: 3em;
   margin-bot: 2em;
-  background-color: pink;
+  /* background-color: pink; */
 }
 
 .board {
   margin: 2em;
-  background-color: yellow;
-}
-
-.top-row {
-  
-}
-
-.mid-row {
-  
-}
-
-.bot-row {
-  
+  /* background-color: yellow; */
+  -webkit-user-select: none;
 }
 
 .grid {
   display: inline-block;
   font-size: 3.125em;
-  margin: 10px;
+  margin: 0 auto;
+  width: 75px;
+  -webkit-user-select: none;
+}
+
+.grid:hover {
+  background-color: grey;
+  opacity: .5;
+}
+
+/* ID *************************/
+#aa,
+#ba,
+#ca {
+  border-right: 1px solid black;
+}
+
+#ab,
+#bb,
+#cb {
+  border-right: 1px solid black;
+}
+
+#aa,
+#ab,
+#ac {
+  border-bottom: 1px solid black;
+}
+
+#ba,
+#bb,
+#bc {
+  border-bottom: 1px solid black;
 }
