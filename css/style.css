@@ -1,6 +1,7 @@
 body {
   text-align: center;
   font-family: helvetica;
+  -webkit-user-select: none;
 }
 
 h1 {
@@ -33,7 +34,7 @@ main {
   font-size: 3.125em;
   margin: 0 auto;
   width: 75px;
-  -webkit-user-select: none;
+
 }
 
 .grid:hover {

@@ -83,3 +83,7 @@
 	else { gamePrompt.textContent = "draw"; }
 
 
+//******************
+**   Bug Issues   **
+******************//
+- [ ] 'Draw' state happens on the last possible move--even if playerX wins on the last move

@@ -113,7 +113,7 @@ function shutDown() {
 
 function major(e) {
 // this runs everything needed on 'click' event
-    console.log("The id is: " + e.target.id);
+    // console.log("The id is: " + e.target.id);
     let playerTurn = turn();
     if (e.target.id === 'aa') {
         if (playerTurn) {
@@ -177,8 +177,10 @@ function major(e) {
         console.log(playerX);
         //checkDraw function;
         if (count === 9) {
-            gamePrompt.textContent = 'DRAW';
-            shutDown();
+            checkWin(playerX);
+            if (gamePrompt.textContent == "") {
+                gamePrompt.textContent = 'DRAW';
+            }
         } else {
         checkWin(playerX);
         }
