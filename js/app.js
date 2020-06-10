@@ -79,8 +79,6 @@ function checkWin(playerArray) {
     for (i = 0; i < win.length; i++) {
         let counter = 0;
         for (j = 0; j < win[i].length; j++) {
-            // console.log("counter: " + counter);
-            // console.log("win: " + win[i][j]);
            if (playerArray.includes(win[i][j])) {
             counter++;
             if (counter === 3) {
@@ -174,19 +172,17 @@ function major(e) {
     //.push to each player's array
     if (playerTurn) {
         playerX.push(e.target.id);
-        console.log(playerX);
         //checkDraw function;
         if (count === 9) {
-            checkWin(playerX);
-            if (gamePrompt.textContent == "") {
-                gamePrompt.textContent = 'DRAW';
+            checkWin(playerX)
+            if (gamePrompt.textContent !== "X wins!") {
+                gamePrompt.textContent = 'DRAW'
             }
         } else {
         checkWin(playerX);
         }
     } else {
         playerO.push(e.target.id);
-        console.log(playerO);
         //checkDraw function;
         if (count === 9) {
             gamePrompt.textContent = 'DRAW';
